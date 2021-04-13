@@ -1,0 +1,665 @@
+@font-face {
+    font-family: breuerFont;
+    src: url(assets/fonts/BreuerFont.ttf) format('truetype');
+}
+@font-face {
+    font-family: breuerHeadlineOblique;
+    src: url(assets/fonts/BreuerHeadline-Oblique.otf) format('truetype');
+}
+@font-face {
+    font-family: breuerHeadline;
+    src: url(assets/fonts/BreuerHeadline.ttf) format('truetype');
+}
+@font-face {
+    font-family: breuerBold;
+    src: url(assets/fonts/BreuerText-Bold.ttf) format('truetype');
+}
+@font-face {
+    font-family: breuerBoldItalic;
+    src: url(assets/fonts/BreuerText-BoldItalic.otf) format('truetype');
+}
+@font-face {
+    font-family: breuerMedium;
+    src: url(assets/fonts/BreuerText-Medium.ttf) format('truetype');
+}
+@font-face {
+    font-family: breuerRegular;
+    src: url(assets/fonts/BreuerText-Regular.otf) format('truetype');
+}
+@font-face {
+    font-family: breuerText;
+    src: url(assets/fonts/BreuerText.ttf) format('truetype');
+}
+
+:root {
+    /* Breakpoints Sizes */
+    --sm: 576px;
+    --md: 768px;
+    --lg: 992px;
+    --xl: 1200px;
+    
+    /* Colors */
+    --primary: #002346;
+    --secondary: #ffe903;
+    --secondary-gradient: #ffd000;
+    --login: #c08b00;
+    --white: #ffffff;
+
+    /* Initialize */
+    font-size: 13px;
+    font-family: breuerFont, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    background: var(--primary) url("assets/background.jpg") no-repeat center 0;
+    color: var(--white);
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    padding: 0;
+    margin: 0;
+}
+
+input {
+    padding: 5px;
+    width: 240px;
+    font-size: 16px;
+}
+
+a {
+    color: var(--white);
+}
+
+.container {
+    width: 56%;
+    margin-inline: auto;
+}
+
+.yellow-text {
+    background-color: var(--white);
+    background-image: linear-gradient( var(--secondary), var(--secondary-gradient));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+
+.header{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+}
+
+
+
+.login{
+    display: flex;
+    margin-left: auto;
+}
+
+.login a {
+    padding: 10px 5px 3px 5px;
+    border: 1px solid var(--white);
+    border-radius: 2px 0 0 2px;
+}
+
+.login button {
+    background-image: linear-gradient( var(--secondary), var(--secondary-gradient));
+    color: var(--login);
+    margin-left: -2px;
+    border: none;
+    border-radius: 2px 2px 2px 2px;
+    font-family: breuerHeadline;
+    font-size: 21px;
+    text-transform: uppercase;
+}
+
+.login button a {
+    border:none;
+    text-decoration: none;
+    color: var(--login);
+}
+
+.main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.main img {
+    margin: 0 auto;
+    display: block;
+    max-width: 100%;
+}
+
+.main .content {
+    margin-top: -380px;
+    max-width: 427.02px;
+    margin-inline: auto;
+    text-align: center;
+    line-height: 1;
+}
+
+.content h3 {
+    font-family: breuerHeadlineOblique;
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+.content h2 {
+    font-family: breuerHeadlineOblique;
+    font-size: 48px;
+    letter-spacing: 1px;
+}
+
+.content h2 span {
+    font-size: 111px;
+    line-height: 0.8;
+    display: block;
+}
+
+.content p {
+    font-size: 16px;
+    margin: 0;
+
+}
+
+.content input {
+    margin-block: 10px;
+    display: block;
+    margin-inline: auto;
+}
+
+.content button {
+    font-size: 21px;
+    font-family: breuerBoldItalic;
+    width: 240px;
+    padding: 7px;
+    color: var(--white);
+    background-image: linear-gradient(80deg, #241e48, #64ace0 , #241e48);
+    border: 2px solid #77bc20;
+    box-shadow: 0 0 0 2px #ffcf00,
+    0 0 0 4px #ea4632;
+    border-radius: 5px;
+}
+
+.content button:hover {
+    background-image: linear-gradient(80deg, #64ace0, #241e48 , #64ace0);
+}
+
+.steps {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    gap:10px;
+}
+
+.step1, .step2, .step3 {
+    display: flex;
+}
+
+.steps h1, h2, h3 {
+    margin-block: auto;
+}
+
+.merge {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-image: radial-gradient(#0098ea, #0062cd);
+    border-radius: 50%;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.merge img {
+    margin-left: -5px;
+    margin-top: -5px;
+    animation: rotate 4s linear infinite;
+}
+
+
+.merge span {
+    position: absolute;
+    top: 0;
+    display: block;
+    margin-left: 32%;
+    font-size: 85px;
+    font-family: BreuerHeadline;
+    background-color: #0062cd;
+    color: transparent;
+    text-shadow: 2px 2px 3px rgba(0, 35, 75, 0.5);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+}
+
+/* Animations */
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.gamble {
+    width: 207px;
+    margin-inline: auto;
+    margin-block: 20px;
+}
+
+.about {
+    background: var(--primary);
+    width: 100vw;
+    height: 100vh;
+    font-size: 19px;
+    text-align: justify;
+    position: fixed;
+    top: 1000px;
+    transition: top 1s;
+    padding-top: 20px;
+}
+
+.about a {
+   display: block;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.terms {
+    background: var(--white);
+    color: black;
+    font-size: 16px;
+    position: fixed;
+    top: -1000px;
+    width: 50%;
+    margin-left: 30px;
+    transition: top 0.5s;
+    display: none;
+    border-radius: 5px;
+}
+
+
+.card-header {
+    background: var(--primary);
+    border: 1px solid var(--white);
+    color: white;
+    padding-block: 10px;
+    padding-left: 25px;
+    background-image: linear-gradient(#0062cd, var(--primary));
+    border-radius: 5px 5px 0 0;
+}
+
+.card-header button {
+    font-family: breuerBold;
+    font-size: 20px;
+    color: var(--white);
+    background: transparent;
+    border: none;
+    float: right;
+    margin-top: -25px;
+    margin-right: 20px;
+}
+
+.footer {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+@media screen and (max-width: 992px) {
+    .container {
+        width: 70%;
+    }
+    
+    .content {
+        margin-top: 60px;
+    }
+
+    .steps h1,h2,h3 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) { 
+    .container {
+        width: 75%;
+    }
+
+    .header img{
+        width: 100%;
+    }
+
+    .main .content {
+        margin-top: -380px !important;
+    }
+
+    .content h3 {
+        font-size: 21px !important;
+    }
+
+    .content h2 {
+        font-size: 35px !important;
+        padding-inline: 50px;
+    }
+
+    .content p {
+        margin-top: 25px;
+    }
+
+    .content span {
+        padding-top: 10px;
+        font-size: 70px !important;
+    }
+
+    .content form {
+        margin-top: 32px;
+    }
+
+    .steps {
+        display: block !important;
+        flex-direction: column;
+    }
+
+    .step1, .step2, .step3 {
+        margin-inline: 80px;
+        margin-block: 20px;
+    }
+
+    .footer {
+        margin-bottom: 20px;
+    }
+
+    #error-message {
+        font-size: 16px !important;
+    }
+}
+
+@media (max-width: 700px) { 
+    .main .content {
+        margin-top: -340px !important;
+    }
+
+    .about-content {
+        font-size: 16px !important;
+    }
+
+    .terms {
+        width: 65%;
+        font-size: 13px;
+    }
+
+    #error-message {
+        font-size: 16px !important;
+    }
+}
+
+@media (max-width: 638px) { 
+    .main .content {
+        margin-top: -300px !important;
+    }
+
+    .content h3 {
+        font-size: 18px !important;
+    }
+
+    .content h2 {
+        font-size: 25px !important;
+        padding-inline: 50px;
+    }
+
+    .content p {
+        margin-top: 25px;
+    }
+
+    .content span {
+        font-size: 60px !important;
+    }
+
+    .content form {
+        margin-top: 30px;
+    }
+
+    .gamble {
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 576px) { 
+    .container {
+        width: 80% !important;
+    }
+
+    .header img{
+        width: 120px !important;
+    }
+
+    .login a{
+        font-size: 11px !important;
+    }
+
+    .main .content {
+        margin-top: -280px !important;
+    }
+
+    .content h3 {
+        font-size: 18px !important;
+    }
+
+    .content h2 {
+        font-size: 25px !important;
+        padding-inline: 50px;
+    }
+
+    .content p {
+        margin-top: 25px;
+        padding-inline: 30px !important;
+    }
+
+    .content span {
+        font-size: 60px !important;
+    }
+
+    .content form {
+        margin-top: 30px;
+    }
+
+    .step1, .step2, .step3 {
+        width: 250px !important;
+        height: 80px !important;
+    }
+
+    .merge {
+        position: relative;
+        width: 65px;
+        height: 62px;
+        background-image: radial-gradient(#0098ea, #0062cd);
+        border-radius: 50%;
+        text-align: center;
+        margin-right: 10px;
+    }
+
+    .merge img {
+        width: 71px;
+        height: 71px;
+    }
+
+    .merge span {
+        font-size: 50px;
+    }
+
+    .steps h2 {
+        width: 150px;
+    }
+
+    .footer {
+        margin-block: 20px;
+    }
+}
+
+@media screen and (max-width: 485px) {
+    .main .content {
+        margin-top: -260px !important;
+    }
+
+    .content p {
+        margin-top: 2px;
+    }
+
+    .content form {
+        margin-top: 2px;
+    }
+
+    .content input {
+        font-size: 11px !important;
+        width: 200px;
+        margin-block: 2px;
+    }
+
+    .content button {
+        margin-top: 5px;
+        font-size: 11px;
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 447px){
+    .container {
+        width: 80% !important;
+    }
+
+    .main .content {
+        margin-top: -200px !important;
+    }
+
+    .header img{
+        width: 100px !important;
+    }
+
+    .login a{
+        font-size: 11px !important;
+    }
+
+    .main .content {
+        margin-top: -230px !important;
+    }
+
+    .content h3 {
+        font-size: 14px !important;
+    }
+
+    .content h2 {
+        font-size: 21px !important;
+        padding-inline: 50px;
+    }
+
+    .content p {
+        font-size: 11px;
+        padding-top: 8px;
+        padding-inline: 30px !important;
+    }
+
+    .content span {
+        padding-top: 7px;
+        font-size: 40px !important;
+    }
+
+    .content form {
+        margin-top: 12px;
+    }
+
+    .content input {
+        font-size: 11px !important;
+        width: 100px;
+        margin-block: 2px;
+    }
+
+    .content button {
+        font-size: 11px;
+        width: 100px;
+    }
+    
+    .steps {
+        margin-left: -50px;
+    }
+
+    .about a {
+        font-size: 16px;
+    }
+
+    .about-content {
+        font-size: 14px !important;
+    }
+
+    
+}
+
+@media (max-width: 400px) { 
+    .container {
+        width: 80% !important;
+    }
+
+    .header img{
+        width: 100px !important;
+    }
+
+    .login a{
+        font-size: 11px !important;
+    }
+
+    .main .content {
+        margin-top: -200px !important;
+    }
+
+    .content h3 {
+        font-size: 14px !important;
+    }
+
+    .content h2 {
+        font-size: 21px !important;
+        padding-inline: 50px;
+    }
+
+    .content p {
+        font-size: 11px;
+        margin-top: 2px;
+        padding-inline: 50px !important;
+    }
+
+    .content span {
+        font-size: 30px !important;
+    }
+
+    .content form {
+        margin-top: 10px;
+    }
+
+    .content input {
+        font-size: 11px !important;
+        width: 100px;
+        margin-block: 2px;
+    }
+
+    .content button {
+        margin-top: 5px;
+        font-size: 11px;
+        width: 100px;
+    }
+
+    .steps {
+        margin-left: -50px;
+    }
+
+    .merge {
+        width: 63px !important;
+        height: 62px !important;
+    }
+}
