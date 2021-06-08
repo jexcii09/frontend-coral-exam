@@ -1,6 +1,6 @@
 Put this folder on base on public folder you are using 
 In my case I use laragon, it should look like this:
-laragon/wwww/coral
+laragon/www/coral
 
 In XAMPP Server
 xampp/htdocs/coral
